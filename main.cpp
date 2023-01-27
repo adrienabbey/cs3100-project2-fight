@@ -11,55 +11,56 @@
 
 using namespace std;
 
-int main()
-{
-    // Prompt for a new character:
-    cout << "First character's name?" << endl;
-
-    // Create the first character:
-    Character firstCharacter = newCharacter();
-
-    // End program:
-    return 0;
-}
-
 Character newCharacter()
 {
-    /* Variables */
-    string name;
-    string role;
-    int hitPoints;
-    int attackBonus;
-    int damageBonus;
-    int armorClass;
+     /* Variables */
+     string name;
+     string role;
+     int hitPoints;
+     int attackBonus;
+     int damageBonus;
+     int armorClass;
 
-    // Grab the name from the user:
-    cin >> name;
+     // Grab the name from the user:
+     cin >> name;
 
-    // Prompt for role:
-    cout << endl
-         << name << "'s role?" << endl;
-    cin >> role;
+     // Prompt for role:
+     cout << endl
+          << name << "'s role?" << endl;
+     cin >> role;
 
-    // Prompt for hit points:
-    cout << endl
-         << name << " the " << role << "'s hit points?" << endl;
-    cin >> hitPoints;
+     // Prompt for hit points:
+     cout << endl
+          << name << " the " << role << "'s hit points?" << endl;
+     cin >> hitPoints;
 
-    // Prompt for attack bonus:
-    cout << endl
-         << name << " the " << role << "'s attack bonus?" << endl;
-    cin >> attackBonus;
+     // Prompt for attack bonus:
+     cout << endl
+          << name << " the " << role << "'s attack bonus?" << endl;
+     cin >> attackBonus;
 
-    // Prompt for damage bonus:
-    cout << endl
-         << name << " the " << role << "'s damage bonus?" << endl;
-    cin >> damageBonus;
+     // Prompt for damage bonus:
+     cout << endl
+          << name << " the " << role << "'s damage bonus?" << endl;
+     cin >> damageBonus;
 
-    // Prompt for armor class:
-    cout << name << " the " << role << "'s armor class?" << endl;
+     // Prompt for armor class:
+     cout << name << " the " << role << "'s armor class?" << endl;
+     cin >> armorClass;
 
-    Character newCharacter = Character(name, role, hitPoints, attackBonus, damageBonus, armorClass);
+     Character newCharacter = Character(name, role, hitPoints, attackBonus, damageBonus, armorClass);
 
-    return newCharacter;
+     return newCharacter;
+}
+
+int main()
+{
+     // Prompt for a new character:
+     cout << "First character's name?" << endl;
+
+     // Create the first character:
+     Character firstCharacter = newCharacter();
+
+     // End program:
+     return 0;
 }
