@@ -17,8 +17,8 @@ private:
     int armorClass;
 
 public:
-    Character();
-    void print(ostream &);
+    Character(string newName, string newRole, int newHitPoints, int newAttackBonus, int newDamageBonus, int newArmorClass);
+    void print(ostream &) const;
     void attack(Character &otherCharacter);
     void damage(int amount);
     int getHealth();
