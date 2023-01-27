@@ -56,6 +56,9 @@ Character newCharacter()
 
 int main()
 {
+     // Seed the RNG:
+     srand(time(nullptr));
+
      // Prompt for the first character:
      cout << "First character's name?" << endl;
 
@@ -68,6 +71,44 @@ int main()
      // Prompt for the second character:
      cout << endl
           << "Second character's name?" << endl;
+
+     // Create the second character:
+     Character secondCharacter = newCharacter();
+
+     // Print out the second character's summary:
+     secondCharacter.print();
+
+     // These characters exist to do one thing only:
+     cout << endl
+          << "FIGHT!" << endl;
+
+     // FIGHT!
+     while (firstCharacter.getHealth() > 0 && secondCharacter.getHealth() > 0)
+     {
+          // First character goes first:
+          firstCharacter.attack(secondCharacter);
+
+          // Second character only gets a turn if they didn't die already:
+          if (secondCharacter.getHealth() > 0)
+          {
+               secondCharacter.attack(firstCharacter);
+          }
+     }
+
+     // Announce the victor:
+     if (firstCharacter.getHealth() > secondCharacter.getHealth())
+     {
+          cout << firstCharacter.getName() << " wins!" << endl;
+     }
+     else if (secondCharacter.getHealth() > firstCharacter.getHealth())
+     {
+          cout << secondCharacter.getName() << " wins!" << endl;
+     }
+     else
+     {
+          cout << endl
+               << "SOMETHING WENT WRONG!" << endl;
+     }
 
      // End program:
      return 0;
