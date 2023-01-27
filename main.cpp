@@ -45,7 +45,8 @@ Character newCharacter()
      cin >> damageBonus;
 
      // Prompt for armor class:
-     cout << name << " the " << role << "'s armor class?" << endl;
+     cout << endl
+          << name << " the " << role << "'s armor class?" << endl;
      cin >> armorClass;
 
      Character newCharacter = Character(name, role, hitPoints, attackBonus, damageBonus, armorClass);
@@ -55,11 +56,18 @@ Character newCharacter()
 
 int main()
 {
-     // Prompt for a new character:
+     // Prompt for the first character:
      cout << "First character's name?" << endl;
 
      // Create the first character:
      Character firstCharacter = newCharacter();
+
+     // Print out the first character's summary:
+     firstCharacter.print();
+
+     // Prompt for the second character:
+     cout << endl
+          << "Second character's name?" << endl;
 
      // End program:
      return 0;
