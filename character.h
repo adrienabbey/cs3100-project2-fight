@@ -18,7 +18,8 @@ private:
 
 public:
     Character(string newName, string newRole, int newHitPoints, int newAttackBonus, int newDamageBonus, int newArmorClass);
-    void print(ostream &) const;
+    // void print(ostream &) const;
+    void print(); // Temporary fix
     void attack(Character &otherCharacter);
     void damage(int amount);
     int getHealth();
