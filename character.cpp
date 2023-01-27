@@ -2,6 +2,7 @@
  * Adrien Abbey, CS-3100-02, Jan. 27, 2023
  */
 
+#include <iostream>
 #include "character.h"
 
 using namespace std;
@@ -21,9 +22,24 @@ Character::Character(string newName, string newRole, int newHitPoints,
 
 /* Functions */
 
-void Character::print(ostream &) const
+// void Character::print(ostream &) const
+// {
+//     // Fixme!
+// }
+
+// Temporary function:
+void Character::print()
 {
-    // Fixme!
+    // Print out the character sheet:
+
+    cout << endl
+         << "Character summary" << endl;
+    cout << "-----------------" << endl;
+    cout << name << " the " << role << endl;
+    cout << "HP: " << hitPoints << endl;
+    cout << "AB: " << attackBonus << endl;
+    cout << "DB: " << damageBonus << endl;
+    cout << "AC: " << armorClass << endl;
 }
 
 // Attack another character.
