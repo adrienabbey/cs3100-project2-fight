@@ -2,6 +2,9 @@
  * Adrien Abbey, CS-3100-02, Jan. 27, 2023
  */
 
+#ifndef CHARACTER_H
+#define CHARACTER_H
+
 #include <string>
 
 using namespace std;
@@ -26,3 +29,5 @@ public:
     string getName();
     string getRole();
 };
+
+#endif
