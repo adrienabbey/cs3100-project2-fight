@@ -2,7 +2,9 @@
  * Project #2: FIGHT!
  * Visual Studio Code Server, Ubuntu 22.04, g++/gdb
  *
- *
+ * Main function for 'FIGHT!'
+ * Prompts for input and creates two new characters, then handles basic combat
+ * loop logic, ending after declaring a winner.
  */
 
 #include <iostream>
@@ -66,7 +68,7 @@ int main()
      Character firstCharacter = newCharacter();
 
      // Print out the first character's summary:
-     firstCharacter.print();
+     firstCharacter.print(cout);
 
      // Prompt for the second character:
      cout << endl
@@ -76,7 +78,7 @@ int main()
      Character secondCharacter = newCharacter();
 
      // Print out the second character's summary:
-     secondCharacter.print();
+     secondCharacter.print(cout);
 
      // These characters exist to do one thing only:
      cout << endl
