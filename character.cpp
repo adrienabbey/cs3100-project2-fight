@@ -105,14 +105,20 @@ void Character::damage(int amount)
     }
 }
 
-// Return the character's current health:
-int Character::getHealth()
-{
-    return hitPoints;
-}
-
 // Return the character's name:
 string Character::getName()
 {
     return name;
+}
+
+// Return the character's role:
+string Character::getRole()
+{
+    return role;
+}
+
+// Return the character's health:
+int Character::getHealth()
+{
+    return hitPoints;
 }
