@@ -5,5 +5,8 @@
             "binaryPath": "/home/sevriem/projects/cs3100-project2-fight/main",
             "binaryArgs": []
         }
-    ]
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
