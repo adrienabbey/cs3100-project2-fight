@@ -1,5 +1,7 @@
 /* character class for Project 2: FIGHT!
  * Adrien Abbey, CS-3100-02, Jan. 27, 2023
+ *
+ * Character class file.  Contains class constructor and functions.
  */
 
 #include <iostream>
@@ -22,25 +24,34 @@ Character::Character(string newName, string newRole, int newHitPoints,
 
 /* Functions */
 
-// void Character::print(ostream &) const
-// {
-//     // Fixme!
-// }
-
-// Temporary function:
-void Character::print()
+void Character::print(ostream &os) const
 {
     // Print out the character sheet:
 
-    cout << endl
-         << "Character summary" << endl;
-    cout << "-----------------" << endl;
-    cout << name << " the " << role << endl;
-    cout << "HP: " << hitPoints << endl;
-    cout << "AB: " << attackBonus << endl;
-    cout << "DB: " << damageBonus << endl;
-    cout << "AC: " << armorClass << endl;
+    os << endl
+       << "Character summary" << endl;
+    os << "-----------------" << endl;
+    os << name << " the " << role << endl;
+    os << "HP: " << hitPoints << endl;
+    os << "AB: " << attackBonus << endl;
+    os << "DB: " << damageBonus << endl;
+    os << "AC: " << armorClass << endl;
 }
+
+// Temporary function:
+// void Character::print()
+// {
+//     // Print out the character sheet:
+
+//     cout << endl
+//          << "Character summary" << endl;
+//     cout << "-----------------" << endl;
+//     cout << name << " the " << role << endl;
+//     cout << "HP: " << hitPoints << endl;
+//     cout << "AB: " << attackBonus << endl;
+//     cout << "DB: " << damageBonus << endl;
+//     cout << "AC: " << armorClass << endl;
+// }
 
 // Attack another character.
 void Character::attack(Character &otherCharacter)
@@ -53,7 +64,7 @@ void Character::attack(Character &otherCharacter)
     int attackTotal = attackRoll + attackBonus;
 
     // Display attack roll result:
-    cout << "Attack roll: " << attackRoll << " + " << attackBonus << " = " << attackTotal;
+    cout << "Attack roll: " << attackRoll << " + " << attackBonus << " = " << attackTotal << " vs. " << otherCharacter.armorClass;
 
     // Check if the attack hits:
     if (attackTotal >= otherCharacter.armorClass)
